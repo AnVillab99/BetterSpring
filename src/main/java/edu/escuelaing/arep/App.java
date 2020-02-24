@@ -1,13 +1,19 @@
 package edu.escuelaing.arep;
 
+import java.io.IOException;
+
 /**
  * Hello world!
  *
  */
-public class App 
-{
-    public static void main( String[] args )
+public class App {
+    private static webServer ws;
+
+    public static void main(String[] args) throws IOException
     {
-        System.out.println( "Hello World!" );
+        ws = new webServer();
+        ws.checkAnnotations();
+        ws.start();
+        
     }
 }
