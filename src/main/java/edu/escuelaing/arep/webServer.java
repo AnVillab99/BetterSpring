@@ -70,7 +70,7 @@ public class webServer {
 
 
 	public void checkAnnotations() {
-        String path = "edu.escuelaing.arep.annotations";
+        String path = "edu/escuelaing/arep/annotations";
         ArrayList<File> folders = new ArrayList<File>();
         try {
             ClassLoader classldr= Thread.currentThread().getContextClassLoader();
