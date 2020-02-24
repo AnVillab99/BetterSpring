@@ -3,7 +3,7 @@ package edu.escuelaing.arep;
 import java.io.IOException;
 
 /**
- * Hello world!
+ * Clase principal
  *
  */
 public class App {

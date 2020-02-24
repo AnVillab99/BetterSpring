@@ -36,6 +36,7 @@ public class worker implements Runnable {
      * Worker constructor.
      * 
      * @param clntSocket client socket
+     * @param webAnnoted el map de las anotaciones web String (url a manejar), handler (de la anotacion)
      */
     public worker(Socket clntSocket, Map webAnnoted) {
         clientSocket = clntSocket;

@@ -22,8 +22,8 @@ public class webServer {
     static int PORT;
     static private Map<String,AnnnotationHandler> webAnnoted = new HashMap<String,AnnnotationHandler>();
     /**
-     * This is the main method of the app. This method receives initially the clients petitions and manages 
-     * them through threads
+     * Metodo principal, recibe los client socket y genera workers para manejarlos
+     * @throws IOException si el puerto del server esta ocupado
      */
     public void start() throws IOException {
         PORT = getPort();
@@ -56,7 +56,7 @@ public class webServer {
     
     /**
      * This method return the port where the app works
-     * @return
+     * @return int port
      */
 
     static int getPort() {
@@ -68,7 +68,9 @@ public class webServer {
 
 
 
-
+    /**
+     * Este metodo revisa los metodos con anotaciones web para facilitar su ejecucion
+     */
 	public void checkAnnotations() {
         String path = "edu/escuelaing/arep/annotations";
         ArrayList<File> folders = new ArrayList<File>();

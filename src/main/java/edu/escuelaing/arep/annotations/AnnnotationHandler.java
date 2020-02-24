@@ -4,26 +4,26 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 
-
+/**
+ * Clase que majea la ejecucion de metodos con anotacion @Web
+ */
 public class AnnnotationHandler {
 
     private Method m;
 
     /**
-     * StaticMethodHandler constructor.
+     * Constructore AnnnotationHandler
      *
-     * @param method represents the method of a class that has an annotation.
+     * @param method metodo a guardar.
      */
     public AnnnotationHandler(Method method) {
         this.m = method;
     }
 
     /**
-     * Process allows to execute the method that
-     * this handler is keeping.
-     *
-     * @param methodArg represent the params of the method to handle.
-     * @return String : the response of the method.
+     * Funcion que maneja la ejecucion de funciones con parameto para la anotacion custom web
+     * @param arg el parametro que necesita el metodo guardado.
+     * @return String la respuesta del metodo guardado
      */
     public String handle(String arg) {
         String ans = null;
@@ -39,10 +39,8 @@ public class AnnnotationHandler {
     }
 
     /**
-     * Process allows to execute the method that
-     * this handler is keeping.
-     *
-     * @return String : the response of the method.
+     * Funcion que maneja la ejecucion de funciones sin parameto para la anotacion custom web
+     * @return String la respuesta del metodo guardado
      */
     public String handle() {
         String ans = null;

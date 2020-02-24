@@ -1,11 +1,15 @@
 package edu.escuelaing.arep.annotations;
 
 /**
- * Web Service allows to developers create new functions for their
- * web application.
+ * Clase para guardar funciones que necesiten la anotaicon web
  */
 public class AnnotationMethods {
 
+    /**
+     * Metodo que devuleve un html comos string saludando, prueba de anotaciones con parametro
+     * @param name String nombre a saludar
+     * @return string el html del saludo custom
+     */
     @Web("hola")
     public static String hola(String name) {
         return "<html>" +
@@ -19,6 +23,10 @@ public class AnnotationMethods {
                 "</html>";
     }
 
+    /**
+     * Metodo que devuleve un html comos string saludando, prueba de anotaciones
+     * @return el html del saludo
+     */
     @Web("hello")
     public static String hello() {
         return "<html>" +
