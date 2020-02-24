@@ -96,10 +96,13 @@ public class webServer {
                     if (clase.endsWith(".class")) {
                         Class<?> c=null;
                         try{
+                            System.out.println("busca la clase");
                             c = Class.forName("edu.escuelaing.arep.annotations."+clase.substring(0, clase.indexOf(".")));
+                            System.out.println("hallo la clase");
                             Method[] methods = c.getMethods();
                             for (Method m : methods) {
-                                if (m.isAnnotationPresent(Web.class)) {                                    
+                                if (m.isAnnotationPresent(Web.class)) { 
+                                    System.out.println("hay una con anotacion");                                   
                                     webAnnoted.put("/ann/" + m.getAnnotation(Web.class).value(), new AnnnotationHandler(m));
                                     System.out.println("webannoted");
                                 }
