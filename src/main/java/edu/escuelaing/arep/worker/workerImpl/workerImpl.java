@@ -22,7 +22,7 @@ import edu.escuelaing.arep.annotations.AnnnotationHandler;
 /**
  * This class manage each petition to the server
  */
-public class worker implements Runnable {
+public class workerImpl implements Runnable {
 
     private Socket clientSocket = null;
     static final String ROOT = System.getProperty("user.dir") + "/src/main/java/edu/escuelaing/arep/resources";
@@ -38,7 +38,7 @@ public class worker implements Runnable {
      * @param clntSocket client socket
      * @param webAnnoted el map de las anotaciones web String (url a manejar), handler (de la anotacion)
      */
-    public worker(Socket clntSocket, Map webAnnoted) {
+    public workerImpl(Socket clntSocket, Map webAnnoted) {
         clientSocket = clntSocket;
         this.webAnnoted = webAnnoted;
 

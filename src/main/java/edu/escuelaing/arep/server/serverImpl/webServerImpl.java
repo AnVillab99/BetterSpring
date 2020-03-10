@@ -1,4 +1,4 @@
-package edu.escuelaing.arep;
+package edu.escuelaing.arep.server.serverImpl;
 
 import java.io.*;
 import java.lang.reflect.Method;
@@ -13,10 +13,11 @@ import java.util.Map;
 
 import edu.escuelaing.arep.annotations.AnnnotationHandler;
 import edu.escuelaing.arep.annotations.Web;
+import edu.escuelaing.arep.server.webServer;
 
 //import com.google.gson.Gson;
 
-public class webServer {
+public class webServerImpl implements webServer{
 
     
     static int PORT;
